@@ -1,0 +1,314 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #16324f;
+    --azul: #246b8f;
+    --verde: #2a9d8f;
+    --fundo: #f5f7f4;
+    --texto: #263746;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: white;
+    line-height: 1.6;
+}
+
+/* MENU */
+
+.navbar {
+    background: var(--azul-escuro);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+/* PÁGINA INICIAL */
+
+.hero {
+    background: linear-gradient(120deg, #16324f, #246b8f);
+    color: white;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: clamp(32px, 6vw, 55px);
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 600px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.eyebrow {
+    color: #a9e4d8;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.section-space {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: var(--azul-escuro);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.info-card {
+    background: white;
+    border: 1px solid #dce5e8;
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+    transition: 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+}
+
+.info-card h3 {
+    color: var(--azul-escuro);
+    margin: 15px 0 10px;
+    font-size: 22px;
+}
+
+.info-card p {
+    color: #657482;
+}
+
+.number {
+    background: #dff4ed;
+    color: #16734c;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.impact {
+    background: var(--fundo);
+    padding: 50px 20px;
+}
+
+.impact h2 {
+    color: var(--azul-escuro);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* FORMULÁRIO */
+
+.form-container {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border: 1px solid #dce5e8;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.form-container h1 {
+    color: var(--azul-escuro);
+    font-weight: bold;
+}
+
+.form-label {
+    font-weight: bold;
+    color: var(--azul-escuro);
+}
+
+.form-control,
+.form-select {
+    min-height: 45px;
+}
+
+.privacy-note {
+    background: #eef8f5;
+    border-left: 4px solid var(--verde);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#form-message,
+#records-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.success {
+    color: #16734c;
+}
+
+.error {
+    color: #b42318;
+}
+
+/* REGISTROS */
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.toolbar select {
+    max-width: 350px;
+}
+
+.records-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.record-card {
+    border: 1px solid #dce5e8;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+    overflow-wrap: anywhere;
+}
+
+.record-card h3 {
+    color: var(--azul-escuro);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.record-card p {
+    margin: 10px 0;
+}
+
+.record-meta {
+    color: #657482;
+    font-size: 13px;
+}
+
+.status {
+    display: inline-block;
+    background: #fff3d8;
+    color: #815500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status.progress {
+    background: #e1f1fa;
+    color: #1c5b82;
+}
+
+.status.resolved {
+    background: #ddf5e9;
+    color: #176344;
+}
+
+.record-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.empty-state {
+    background: var(--fundo);
+    border: 1px dashed #b8cbd2;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    color: #657482;
+}
+
+/* PAINEL DE ATIVIDADES */
+
+.activity-panel {
+    padding: 25px;
+    background: var(--fundo);
+    border-radius: 12px;
+}
+
+.activity-panel h2 {
+    color: var(--azul-escuro);
+    font-weight: bold;
+}
+
+#activity-list li {
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: var(--azul-escuro);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* TABLET */
+
+@media (min-width: 600px) {
+    .records-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .toolbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width: 992px) {
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .records-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .form-container {
+        padding: 40px;
+    }
+}
